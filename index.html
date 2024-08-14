@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="stylefinales.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img src="./resource/logo_santi.png" alt="">
+
+            <h1>ENCRIPTADOR <samp st>DE TEXTO</samp></h1>
+        </header>
+        <main>
+            <div class="contenedorTextarea">
+                <textarea id="inputText" placeholder="Introduzca el texto aquí..."></textarea>
+                <div class=" action">
+                    <samp>Caracteres:<span id="textValue">0</span></samp>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="encriptar" onclick="openDialog('e')">Encriptar</button>
+                <button id="desencriptar" onclick="openDialog('d')">Desencriptar</button>
+            </div>
+            <div class="contenedorTextarea">
+                <textarea id="outputText" placeholder="El resultado aparecerá aquí..." readonly></textarea>
+                <div class=" action">
+                    <button onclick="copyToClipboard()">Copiar</button>
+                </div>
+            </div>
+
+        </main>
+        </footer>
+
+    </div>
+
+    <div class="dialog" id="dialog">
+        <form>
+            <h3 id="titleDialog">Asignar contraseña</h3>
+            <input placeholder="Contraseña" id="pass">
+            <div>
+                <button onclick="closeDialog(event)">Cancelar</button>
+                <button onclick="save(event)">Aceptar</button>
+            </div>
+        </form>
+
+    </div>
+
+<script src="encriptador.js"></script>
+</body>
+
+</html>
